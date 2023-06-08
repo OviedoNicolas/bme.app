@@ -11,8 +11,8 @@
 <body class="config__body">
     <header id="config__header">
         <nav>
-            <p id="config_inicial">Configuración inicial</p>
-            <p id="config_paso">Configuración inicial ( paso <span>1</span> de 5 )</p>
+            <p id="config_titulo--inicial">Configuración inicial</p>
+            <p id="config_titulo--pasos">Configuración inicial ( paso <span>1</span> de 5 )</p>
             <div class="header__logo--container">
                 <img src="../src/assets/images/logo_1.png" alt="">
             </div>
@@ -22,160 +22,142 @@
         <p>Configuración inicial</p>
     </div>
     <div class="config__pasos" id="inicial">
-        <p>Tenemos que completar algunos datos para que tu tienda (con los servicios que ofrecés) se pueda ver online.</p>
-        <p>En unos pocos pasos vas a tener todo listo!</p>
-        <p><b>(Podés continuar con la carga en cualquier momento...)</b></p>
-        <button class="btn btn__config--inicial">
-            <i class="fa fa-play fa-lg" aria-hidden="true"></i>
-            COMENZAR
-        </button>
-        <div class="config__logo--container">
-            <img src="../src/assets/images/logoletra_color.png" alt="">
+        <div class="config__pasos--container">
+            <p>Tenemos que completar algunos datos para que tu tienda (con los servicios que ofrecés) se pueda ver online.</p>
+            <p>En unos pocos pasos vas a tener todo listo!</p>
+            <p><b>(Podés continuar con la carga en cualquier momento...)</b></p>
+            <button class="btn unselectable">
+                <i class="fa fa-play fa-lg" aria-hidden="true"></i>
+                COMENZAR
+            </button>
+            <div class="config__logo--container">
+                <img src="../src/assets/images/logoletra_color.png" alt="">
+            </div>
         </div>
     </div>
     <div class="config__pasos" id="paso1">
-        <div class="config__form--container">
-            <form class="config__form">
+        <div class="config__pasos--container">
+            <form class="config__form" autoComplete="off">
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text"
+                        class="config__form--input"
+                        name="name"
+                        placeholder=""
+                        required
+                        autoFocus>
                     <span>Tu marca / nombre de fantasía</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text"
+                    name="url"
+                    class="config__form--input"
+                    placeholder=""
+                    value="beauting.me/"
+                    disabled>
                     <span>Dirección de tu tienda virtual</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text"
+                    class="config__form--input"
+                    name="what"
+                    placeholder=""
+                    required>
                     <span>Whatsapp (para que te contacten)</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text" 
+                    class="config__form--input"
+                    name="address"
+                    placeholder=""
+                    required>
                     <span>Dirección (donde ofrecés los servicios)</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text" 
+                    class="config__form--input"
+                    name="floor"
+                    placeholder="">
                     <span>Piso - departamento</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text" 
+                    class="config__form--input"
+                    name="city"
+                    placeholder=""
+                    required>
                     <span>Ciudad - barrio</span>
                 </div>
                 <div>
-                    <input type="text" class="config__form--input">
+                    <input type="text" 
+                    class="config__form--input"
+                    name="state"
+                    placeholder=""
+                    required>
                     <span>Provincia</span>
                 </div>
-                <div>
-                    <button type="submit">Continuar</button>
-                </div>
+                <button class="btn unselectable" type="submit">
+                    <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                        Continuar
+                </button>
             </form>
         </div>
     </div>
     <div class="config__pasos" id="paso2">
-        <div>
+        <div class="config__pasos--container">
             <p>Es momento de subir el logo (o una imagen que te caracterice).</p>
             <p>Si no tenés uno a mano, podés agregarlo más tarde (mientras tanto utilizaremos el nuestro).</p>
-            <button>Subir logo</button>
-            <button>Omitir paso</button>
+            <button class="btn unselectable">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+                Subir logo
+            </button>
+            <button class="btn unselectable">
+                <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                Omitir paso
+            </button>
         </div>
     </div>
     <div class="config__pasos" id="paso3">
-        <div>
+        <div class="config__pasos--container">
             <p>Ahora vamos a posicionar tu ubicación en el mapa (el lugar donde brindás los servicios), para que puedan encontrarte por cercanía tus potenciales nuevos clientes.</p>
-            <button>Ubicarte en el mapa</button>
-            <button>Omitir paso</button>
+            <button class="btn unselectable">
+                <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                Ubicarte en el mapa
+            </button>
+            <button class="btn unselectable">
+                <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                Continuar
+            </button>
         </div>
     </div>
     <div class="config__pasos" id="paso4">
-
+        <div class="config__pasos--container">
+            <!-- Paso 4 (reveer) -->
+            <p>Completá los horarios de atención para cada día de la semana 
+                (marcá los casilleros correspondientes).</p>
+            <div>
+                <table><thead><tr><th style="visibility: visible;"></th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th></tr></thead><tbody class="tbody-agenda"><tr><td><div class="day-agenda-labels">08:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">08:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">09:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">09:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">10:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">10:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">11:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">11:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">12:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">12:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">13:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">13:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">14:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">14:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">15:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">15:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">16:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">16:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">17:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">17:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">18:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">18:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">19:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">19:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">20:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">20:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">21:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">21:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">22:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">22:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr></tbody></table>
+            </div>
+            <button class="btn unselectable">
+                <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                    Continuar
+            </button>
+        </div>
     </div>
     <div class="config__pasos" id="paso5">
-        <div className="form-config-div">
-            <form className="form-config" autoComplete="off" onSubmit={props.onClickConfigStep1}  >
-                <div>
-                    <input autoFocus
-                        type="text"
-                        name="name"
-                        placeholder=""
-                        className="form-abm-input"
-                    
-                        required
-                    />
-                    <span className="span-label" >Tu marca / nombre de fantasía</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="url"
-                        value={props.url}
-                        placeholder=""
-                        className="form-abm-input"
-                        
-                        disabled
-                    />
-                    <span className="span-label" >Dirección de tu tienda virtual</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="what"
-                        placeholder=""
-                        className="form-abm-input"
-                        
-                        required
-                    />
-                    <span className="span-label" >Whatsapp (para que te contacten)</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="address"
-                        placeholder=""
-                        className="form-abm-input"
-                        
-                        required
-                    />
-                    <span className="span-label" >Dirección (donde ofrecés los servicios)</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="floor"
-                        placeholder=""
-                        className="form-abm-input"
-                        
-                    />
-                    <span className="span-label" >Piso - departamento</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="city"
-                        placeholder=""
-                        className="form-abm-input"
-                        
-                        required
-                    />
-                    <span className="span-label" >Ciudad - barrio</span>
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        name="state"
-                        placeholder=""
-                        className="form-abm-input"
-                        required
-                    />
-                    <span className="span-label" >Provincia</span>
-                </div>
-            <br/><br/>
-            <div className="form-login-div">
-                <button type="submit"
-                className="bots-gral unselectable" >
-                    <i className='fa fa-angle-right fa-lg' aria-hidden='true'></i>&nbsp;&nbsp;
-                    Continuar
+        <div class="config__pasos--container">
+            <p>Comienza agregando algunos servicios para que aparezcan 
+                en tu tienda virtual (podrás continuar en cualquier momento 
+                desde tu cuenta).</p>
+            <button class="btn unselectable">
+                <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+                Agregar servicio
+            </button>
+            <div class="config__finalizar">
+                <button class="btn unselectable" >
+                    <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                        FINALIZAR
                 </button>
             </div>
-            </form>
         </div>
     </div>
     <script src="" async defer></script>

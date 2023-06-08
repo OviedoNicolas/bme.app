@@ -8,36 +8,50 @@
     <link rel="stylesheet" href="../src/styles.css">
     <title>Registro</title>
 </head>
-<body>
-    <header>
-        <div id="registro__banner">
+<body class="registro__body">
+    <header id="registro__header">
+        <div class="registro__banner">
             <p>Iniciar registro de cuenta</p>
         </div>
     </header>
-    <div>
+    <div class="registro__logo--container">
         <img src="../src/assets/images/logoletra_color.png" alt="">
     </div>
-    <div>
-        <form>
+    <div class="registro__form--container">
+        <form class="registro__form" autoComplete="off">
             <div>
-                <input type="text">
+                <input type="text"
+                autoFocus
+                name="apellido"
+                placeholder=""
+                required>
                 <span>Apellido:</span>
             </div>
             <div>
-                <input type="text">
+                <input type="text"
+                name="nombre"
+                placeholder=""
+                required>
                 <span>Nombres:</span>
             </div>
             <div>
-                <input type="email">
+                <input type="email"
+                name="email"
+                placeholder=""
+                required>
                 <span>E-mail (usuario):</span>
             </div>
             <div>
-                <input type="password">
+                <input type="password"
+                name="password"
+                placeholder=""
+                required>
                 <span>Contraseña:</span>
             </div>
-            <div className="form-login-div">
-                <button type="submit">REGISTRARME</button>
-            </div>
+            <button class="btn unselectable" type="submit">
+                <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
+                REGISTRARME
+            </button>
         </form>
     </div>
 </body>

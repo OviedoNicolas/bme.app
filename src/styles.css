@@ -49,20 +49,20 @@ img {
   outline: none;
 }
 
-.config__body {
+.config__body, .login__body, .registro__body {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#config__header {
+#config__header, #registro__header, #login__header {
   background-color: #986c79;
   display: flex;
   justify-content: center;
   width: 100%;
 }
-#config__header nav {
+#config__header nav, #registro__header nav, #login__header nav {
   width: 100%;
   max-width: 770px;
   color: #fff;
@@ -74,15 +74,11 @@ img {
   justify-content: space-between;
 }
 
-#config_paso {
-  display: none;
-}
-
 .header__logo--container {
   width: 40px;
 }
 
-.config__banner, #registro__banner {
+.config__banner, .login__banner, .registro__banner {
   width: 100%;
   max-width: 770px;
   background-image: url("../public/assets/images_index/top_index.jpg");
@@ -94,7 +90,7 @@ img {
   align-items: center;
   justify-content: end;
 }
-.config__banner p, #registro__banner p {
+.config__banner p, .login__banner p, .registro__banner p {
   font-weight: bold;
   color: #fff;
   background-color: rgba(170, 156, 163, 0.8274509804);
@@ -109,7 +105,7 @@ img {
   overflow-wrap: normal;
 }
 
-#inicial {
+.config__pasos--container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,41 +113,29 @@ img {
   padding: 20px;
   text-align: center;
   overflow-wrap: normal;
-  display: none;
 }
-
-.config__logo--container {
+.config__pasos--container div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.config__pasos--container .config__logo--container {
+  display: block;
   width: 70%;
   margin-top: 40px;
 }
 
-.btn__config--inicial .fa-lg {
+.btn .fa-lg {
   margin-right: 8px;
 }
 
-.config__form--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  padding: 20px;
-  text-align: center;
-  overflow-wrap: normal;
-}
-.config__form--container div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
-}
-
-.config__form {
+.config__form, .login__form, .registro__form {
   display: flex;
   flex-direction: column;
   width: 80%;
   gap: 20px;
 }
-.config__form input {
+.config__form input, .login__form input, .registro__form input {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   width: 100%;
@@ -162,9 +146,131 @@ img {
   border-bottom: 1px solid #986c79;
   background-color: #f8eaf1;
 }
-.config__form input:focus {
+.config__form input:focus, .login__form input:focus, .registro__form input:focus {
   outline: 0;
   color: #fff;
   border-bottom: 1px solid #986c79;
   background-color: #aa9ca3;
+}
+.config__form input:disabled, .login__form input:disabled, .registro__form input:disabled {
+  background-color: #d9dbda;
+  color: #986c79;
+}
+.config__form span, .login__form span, .registro__form span {
+  font-size: 12px;
+  width: 100%;
+  color: #7d858b;
+  padding-left: 5px;
+  text-align: left;
+  margin-top: 5px;
+}
+.config__form button, .login__form button, .registro__form button {
+  margin-top: 50px;
+  align-self: center;
+}
+
+.config__finalizar {
+  padding: 5px;
+  background-color: #aa9ca3;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.7);
+}
+
+table {
+  font-size: 12px;
+  margin: auto;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+thead {
+  display: block;
+  position: relative;
+}
+
+th {
+  width: 50px;
+  height: 30px;
+  background-color: #d6b6b1;
+  padding-right: 15px;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.tbody-agenda {
+  height: 250px;
+  max-height: 250px;
+  overflow-y: scroll;
+  display: block;
+  margin-top: 10px;
+}
+
+.bg-subtitles-horarios {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 30px;
+  padding: 5px 15px;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  background-color: #aa9ca3;
+  font-size: 15px;
+  text-align: left;
+}
+
+.cell-agenda {
+  font-size: 10px;
+  color: #986c79;
+  padding-top: 7px;
+  width: 50px;
+  height: 30px;
+  vertical-align: middle;
+  border-bottom: 1px solid #d6b6b1;
+  border-right: 1px solid #d6b6b1;
+}
+
+td {
+  padding: 0px;
+}
+
+.day-agenda-labels {
+  text-align: right;
+  margin: auto;
+  width: 50px;
+  /* display: inline-table; */
+  margin-top: -24px;
+  margin-left: -6px;
+  font-size: 12px;
+  /* position: absolute; */
+}
+
+#registro__header, #login__header {
+  background-color: transparent;
+}
+
+.registro__logo--container, .login__logo--container {
+  width: 70%;
+  margin-top: 40px;
+}
+
+.registro__form--container, .login__form--container {
+  width: 100%;
+  max-width: 770px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registro__form--container div, .login__form--container div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
