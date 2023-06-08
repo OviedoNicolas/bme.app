@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+/* Background inputs */
+html {
+  max-width: 770px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", "Montserrat Alternates", sans-serif, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+  margin-bottom: 200px;
+  max-width: 770px;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*
+.img_top_index {
+  position: relative;
+  z-index: -10;
+  height:130px;
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+}
+*/
+.bg-titles-container {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.div-bg-tit {
+  position: fixed;
+  z-index: 999;
+  height: 130px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bg-tit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-titles {
+  position: absolute;
+  top: -75px;
+  right: 0;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(170, 156, 163, 0.7333333333);
+  font-size: 15px;
+  padding: 20px;
+  margin: auto;
+}
+
+.logo-letra-color {
+  width: 80%;
+}
+
+.bots-gral {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*margin: 10px;*/
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  background-color: #986c79;
+  color: white;
+}
+
+.bots-gral:hover {
+  background-color: #986c79;
+}
+
+.bots-gral:active {
+  background-color: #d6b6b1;
+  color: #986c79;
+  outline: none;
+}
+
+.bots-gral:focus {
+  outline: none;
+}
+
+.div-oops {
+  background-color: #f8eaf1;
+  margin: auto;
+  margin-top: 40px;
+  padding: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #986c79;
+}/*# sourceMappingURL=App.css.map */

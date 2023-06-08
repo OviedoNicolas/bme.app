@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente_principal;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img{
+    width: 100%;
+}
+
+.btn{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #986c79;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: .2s;
+
+    &:hover {
+        background-color: #986c79;
+    }
+    
+    &:active {
+        background-color: #d6b6b1;
+        color: #986c79;
+        outline: none;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

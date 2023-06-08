@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/styles.css">
+    <title>Config</title>
+</head>
+<body class="config__body">
+    <header id="config__header">
+        <nav>
+            <p id="config_inicial">Configuración inicial</p>
+            <p id="config_paso">Configuración inicial ( paso <span>1</span> de 5 )</p>
+            <div class="header__logo--container">
+                <img src="../src/assets/images/logo_1.png" alt="">
+            </div>
+        </nav>
+    </header>
+    <div class="config__banner">
+        <p>Configuración inicial</p>
+    </div>
+    <div class="config__pasos" id="inicial">
+        <p>Tenemos que completar algunos datos para que tu tienda (con los servicios que ofrecés) se pueda ver online.</p>
+        <p>En unos pocos pasos vas a tener todo listo!</p>
+        <p><b>(Podés continuar con la carga en cualquier momento...)</b></p>
+        <button class="btn btn__config--inicial">
+            <i class="fa fa-play fa-lg" aria-hidden="true"></i>
+            COMENZAR
+        </button>
+        <div class="config__logo--container">
+            <img src="../src/assets/images/logoletra_color.png" alt="">
+        </div>
+    </div>
+    <div class="config__pasos" id="paso1">
+        <div class="config__form--container">
+            <form class="config__form">
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Tu marca / nombre de fantasía</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Dirección de tu tienda virtual</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Whatsapp (para que te contacten)</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Dirección (donde ofrecés los servicios)</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Piso - departamento</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Ciudad - barrio</span>
+                </div>
+                <div>
+                    <input type="text" class="config__form--input">
+                    <span>Provincia</span>
+                </div>
+                <div>
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="config__pasos" id="paso2">
+        <div>
+            <p>Es momento de subir el logo (o una imagen que te caracterice).</p>
+            <p>Si no tenés uno a mano, podés agregarlo más tarde (mientras tanto utilizaremos el nuestro).</p>
+            <button>Subir logo</button>
+            <button>Omitir paso</button>
+        </div>
+    </div>
+    <div class="config__pasos" id="paso3">
+        <div>
+            <p>Ahora vamos a posicionar tu ubicación en el mapa (el lugar donde brindás los servicios), para que puedan encontrarte por cercanía tus potenciales nuevos clientes.</p>
+            <button>Ubicarte en el mapa</button>
+            <button>Omitir paso</button>
+        </div>
+    </div>
+    <div class="config__pasos" id="paso4">
+
+    </div>
+    <div class="config__pasos" id="paso5">
+        <div className="form-config-div">
+            <form className="form-config" autoComplete="off" onSubmit={props.onClickConfigStep1}  >
+                <div>
+                    <input autoFocus
+                        type="text"
+                        name="name"
+                        placeholder=""
+                        className="form-abm-input"
+                    
+                        required
+                    />
+                    <span className="span-label" >Tu marca / nombre de fantasía</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="url"
+                        value={props.url}
+                        placeholder=""
+                        className="form-abm-input"
+                        
+                        disabled
+                    />
+                    <span className="span-label" >Dirección de tu tienda virtual</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="what"
+                        placeholder=""
+                        className="form-abm-input"
+                        
+                        required
+                    />
+                    <span className="span-label" >Whatsapp (para que te contacten)</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="address"
+                        placeholder=""
+                        className="form-abm-input"
+                        
+                        required
+                    />
+                    <span className="span-label" >Dirección (donde ofrecés los servicios)</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="floor"
+                        placeholder=""
+                        className="form-abm-input"
+                        
+                    />
+                    <span className="span-label" >Piso - departamento</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="city"
+                        placeholder=""
+                        className="form-abm-input"
+                        
+                        required
+                    />
+                    <span className="span-label" >Ciudad - barrio</span>
+                </div>
+                <div>
+                    <input 
+                        type="text"
+                        name="state"
+                        placeholder=""
+                        className="form-abm-input"
+                        required
+                    />
+                    <span className="span-label" >Provincia</span>
+                </div>
+            <br/><br/>
+            <div className="form-login-div">
+                <button type="submit"
+                className="bots-gral unselectable" >
+                    <i className='fa fa-angle-right fa-lg' aria-hidden='true'></i>&nbsp;&nbsp;
+                    Continuar
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+</html>
