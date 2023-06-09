@@ -49,6 +49,10 @@ img {
   outline: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .config__body, .login__body, .registro__body {
   width: 100%;
   display: flex;
@@ -129,6 +133,10 @@ img {
   margin-right: 8px;
 }
 
+#inicial, #paso1, #paso2, #paso3, #paso5 {
+  display: none;
+}
+
 .config__form, .login__form, .registro__form {
   display: flex;
   flex-direction: column;
@@ -179,54 +187,54 @@ img {
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.7);
 }
 
-table {
+.config__horario--container {
+  gap: 35px;
+  align-items: center;
+}
+.config__horario--container table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 12px;
-  margin: auto;
   border-spacing: 0px;
   border-collapse: collapse;
 }
-
-thead {
-  display: block;
-  position: relative;
-}
-
-th {
+.config__horario--container table th {
   width: 50px;
   height: 30px;
   background-color: #d6b6b1;
   padding-right: 15px;
 }
 
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-}
-
-.tbody-agenda {
+.config__horario--agenda {
   height: 250px;
   max-height: 250px;
   overflow-y: scroll;
   display: block;
   margin-top: 10px;
+  padding-top: 20px;
 }
 
-.bg-subtitles-horarios {
+.config__pasos--container .config__checkweekend--container {
   font-family: "Montserrat", sans-serif;
-  position: relative;
   margin-top: 10px;
-  margin-right: 30px;
-  padding: 5px 15px;
-  width: 100%;
   font-weight: bold;
   color: #fff;
   background-color: #aa9ca3;
   font-size: 15px;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
 }
 
-.cell-agenda {
+td {
+  padding: 0px;
+}
+td .cell-agenda {
   font-size: 10px;
   color: #986c79;
   padding-top: 7px;
@@ -237,19 +245,68 @@ tr {
   border-right: 1px solid #d6b6b1;
 }
 
-td {
-  padding: 0px;
-}
-
 .day-agenda-labels {
   text-align: right;
   margin: auto;
   width: 50px;
-  /* display: inline-table; */
+  display: inline-table;
   margin-top: -24px;
   margin-left: -6px;
   font-size: 12px;
-  /* position: absolute; */
+}
+
+.switch {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+  transition: 0.9s;
+}
+.switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f8eaf1;
+  transition: 0.9s;
+  border-radius: 30px;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 1px;
+  background-color: #986c79;
+  transition: 0.9s;
+}
+
+input:checked + .slider::before {
+  background-color: #f8eaf1;
+}
+
+input:checked + .slider {
+  background-color: #986c79;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #986c79;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
 }
 
 #registro__header, #login__header {
@@ -259,6 +316,7 @@ td {
 .registro__logo--container, .login__logo--container {
   width: 70%;
   margin-top: 40px;
+  max-width: 540px;
 }
 
 .registro__form--container, .login__form--container {

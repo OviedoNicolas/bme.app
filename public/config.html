@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/styles.css">
     <title>Config</title>
 </head>
-<body class="config__body">
+<body class="config__body" onload="loadParams();">
     <header id="config__header">
         <nav>
             <p id="config_titulo--inicial">Configuración inicial</p>
@@ -134,8 +134,41 @@
             <!-- Paso 4 (reveer) -->
             <p>Completá los horarios de atención para cada día de la semana 
                 (marcá los casilleros correspondientes).</p>
-            <div>
-                <table><thead><tr><th style="visibility: visible;"></th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th></tr></thead><tbody class="tbody-agenda"><tr><td><div class="day-agenda-labels">08:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">08:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">09:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda-click"><i class="fa fa-check" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">09:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">10:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">10:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">11:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">11:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">12:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">12:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">13:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">13:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">14:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">14:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">15:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">15:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">16:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">16:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">17:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">17:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">18:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">18:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">19:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">19:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">20:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">20:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">21:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">21:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">22:00</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr><tr><td><div class="day-agenda-labels">22:30</div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td><td><div class="cell-agenda"><i class="fa fa-close" aria-hidden="true"></i></div></td></tr></tbody></table>
+            <div class="config__horario--container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="visibility: visible;"></th>
+                            <th>Lun</th>
+                            <th>Mar</th>
+                            <th>Mié</th>
+                            <th>Jue</th>
+                            <th>Vie</th>
+                        </tr>
+                    </thead>
+                    <tbody class="config__horario--agenda" id="tb_lun-vie">
+                        <!-- Tabla de horarios traida desde la api -->
+                    </tbody>
+                </table>
+                <div class="config__checkweekend--container">
+                    <label class="switch">
+                        <input type="checkbox" name="chk_weekends" id="chk_weekends" onchange=clickWeekends()>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="chk_weekends" class="label-subtit-horarios unselectable">Sábados y domingos:</label>
+                </div>
+                <table id="tb_weekend" class="hidden">
+                    <thead>
+                        <tr>
+                            <th style="visibility: visible;"></th>
+                            <th>Sab</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody class="config__horario--agenda" id="tb_sab-dom">
+                        <!-- Tabla de horarios traida desde la api -->
+                    </tbody>
+                </table>
             </div>
             <button class="btn unselectable">
                 <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
@@ -160,6 +193,134 @@
             </div>
         </div>
     </div>
+    <script>
+        var mainUrlApi = "http://localhost:3002/";
+
+        // var sched = Array( 
+        //     { hr: '08:00', lun: false, mar: false, mie: false, jue: false, vie: false }, 
+        //     { hr: '08:30', lun: false, mar: false, mie: false, jue: false, vie: false }, 
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '10:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '10:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '11:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '11:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '12:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '12:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '13:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '13:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '14:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '14:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '15:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '15:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '16:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '17:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '17:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '18:30', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false },
+        //     { hr: '09:00', lun: false, mar: false, mie: false, jue: false, vie: false }
+        // );
+
+
+        const loadParams = () => {
+
+            let url = 'v1/config/schedule';
+
+            console.log('call loadParams:', mainUrlApi, url);
+            
+            fetch(mainUrlApi + url, { 
+                method: 'GET', 
+                headers: { 'Content-Type': 'application/json' }, 
+                //body: JSON.stringify(params) 
+            })
+            .then(response => response.json())
+            .then(res => {   
+
+                console.log("res:", res);
+                
+                if (res.status == 'ok') {
+                    console.log("got agenda!!! YEAH!");
+
+                    let _html = "";
+                    let _html2 = ""
+                    for (let i=0; i<res.config.length; i++) {
+                        _html +=
+                        `<tr>
+                            <td class='day-agenda-labels'>
+                                ${res.config[i].hr}
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                        </tr>`;
+                        _html2 +=
+                        `<tr>
+                            <td class='day-agenda-labels'>${res.config[i].hr}</td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class='cell-agenda'>
+                                    <i class='fa fa-close fa-lg' aria-hidden='true'></i>
+                                </div>
+                            </td>
+                        </tr>`
+                    }
+
+                    document.getElementById('tb_lun-vie').innerHTML = _html;
+                    document.getElementById('tb_sab-dom').innerHTML = _html2;
+                }
+                else if (res.status == 'error') {
+                    if (res.data == 1005 || res.data == 5004) {
+                        location.href = "/login";
+                    }
+                    else {
+                        console.log("ERROR NO IDENTIFICADO: ", JSON.stringify(res));
+                    }
+                }
+            })
+            .catch(err => console.log(err) );
+        }
+
+        const clickWeekends = () => {
+            let tb_weekend = document.getElementById ("tb_weekend");
+
+            tb_weekend.classList.toggle("hidden");
+    }
+
+        loadParams()
+
+    </script>
     <script src="" async defer></script>
 </body>
 </html>
