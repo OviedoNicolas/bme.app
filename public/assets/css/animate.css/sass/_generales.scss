@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $fuente_principal;
+    color: $claro;
 }
 
 .unselectable {
@@ -16,6 +17,10 @@
 
 img{
     width: 100%;
+}
+
+a{
+    text-decoration: none;
 }
 
 .btn{
@@ -51,4 +56,15 @@ img{
 
 .hidden{
     display: none !important;
+}
+
+@mixin toggle-button-style {
+    position: absolute;
+    right: 0;
+    padding: 0px 10px;
+    font-size: 19px;
+    margin-top: 3px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }

@@ -1,275 +1,419 @@
 .config__body{
-    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #config__header{
-    background-color: $color_principal;
+    background-color: #EAA79F;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
     width: 100%;
-    
+
     nav{
-        width: 100%;
-        max-width: 770px;
-        color: #fff;
-        font-size: 15px;
-        font-weight: bold;
-        margin: 0 10px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        gap: 25px;
+
+        a{
+            padding: 10px;
+            border: 2px solid $claro;
+            border-radius: 50px;
+            width: 175px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .fa{
+                font-size: 24px;
+            }
+
+            &:hover{
+                color: $rosa_principal;
+                background-color: $claro;
+
+                i{
+                    color: $rosa_principal;
+                }
+            }
+        }
+
+        .header__redes{
+            width: 50px;
+        }
     }
 }
 
 .header__logo--container{
-    width: 40px;
+    width: 250px;
 }
 
-.config__banner{
-    width: 100%;
-    max-width: 770px;
-    background-image: url("../public/assets/images_index/top_index.jpg");
-    background-size: 100%;
-    background-position: bottom;
-    height: 95px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: end;
+.config__background{
+    overflow: hidden;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
 
-    p{
-        font-weight: bold;
-        color: #fff;
-        background-color: #aa9ca3d3;
-        font-size: 15px;
-        padding: 20px;
+.config__main{
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 120px;
+
+    h1{
+        font-size: 60px;
     }
 }
 
-.config__pasos{
-    width: 100%;
-    max-width: 770px;
-    margin-top: 30px;
-    overflow-wrap: normal;
+.config__container{
+    background-color: $claro;
+    border-radius: 25px;
+    margin-top: 75px;
 }
 
-.config__pasos--container{
+.config__container--titulo{
+    background-color: $azul;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 30px;
     display: flex;
-    flex-direction: column;
+    gap: 30px;
     align-items: center;
-    gap: 25px;
-    padding: 20px;
-    text-align: center;
-    overflow-wrap: normal;
 
     div{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        p{
+            font-size: 24px;
+            font-weight: 200;
+        }
+    
+        h2{
+            font-size: 30px;
+        }
     }
 
-    .config__logo--container{
-        display: block;
-        width: 70%;
-        margin-top: 40px;
-    }
 }
 
-.btn{
-    .fa-lg{
-        margin-right: 8px;
-    }
-}
-
-#inicial, #paso1, #paso2, #paso3,  #paso5{
-    display: none;
-}
-
-
-.config__form{
+.config__titulo--num{
+    border: 2px solid white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 60px;
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 20px;
-
-        input{
-        font-family: "Montserrat", sans-serif;
-        font-size: 16px;
-        width: 100%;
-        text-align: left;
-        border: 0 solid;
-        padding: 4px;
-        color: $color_principal;
-        border-bottom: 1px solid $color_principal;
-        background-color: $color_BGinputs;
-
-            &:focus {
-                outline: 0;
-                color: #fff;
-                border-bottom: 1px solid $color_principal;
-                background-color: #aa9ca3;
-            }
-
-            &:disabled {
-                background-color: #d9dbda;
-                color: $color_principal;
-            }
-        }
-        
-        span{
-            font-size: 12px;
-            width: 100%;
-            color: #7d858b;
-            padding-left: 5px;
-            text-align: left;
-            margin-top: 5px;
-        }
-
-        button{
-            margin-top: 50px;
-            align-self: center;
-        }
-}
-
-.config__finalizar{
-    padding: 5px;
-    background-color: #aa9ca3;
-    width: 100%;
-    position: fixed;
-
-    bottom: 0;
-    text-align: center;
-    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.7);
-}
-
-.config__horario--container{
-    gap: 35px;
+    justify-content: center;
     align-items: center;
-
-        table {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 12px;
-            border-spacing: 0px;
-            border-collapse: collapse;
-
-            th {
-                width: 50px;
-                height: 30px;
-                background-color: $color_secundario;
-                padding-right: 15px;
-            }
-        }
+    box-shadow: 0px 5px 6px #1b1b2d;
+    font-weight: 600;
 }
 
-.config__horario--agenda{
-    height: 250px;
-    max-height: 250px;
-    overflow-y: scroll;
-    display: block;
-    margin-top: 10px;
-    padding-top: 20px;
-}
 
-.config__pasos--container{
-    .config__checkweekend--container{
-        font-family: "Montserrat", sans-serif;
-        margin-top: 10px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #aa9ca3;
-        font-size: 15px;
-        text-align: left;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 20px;
-    }
-}
 
-td {
-    padding: 0px;
 
-        .cell-agenda {
-            font-size: 10px;
-            color: $color_principal;
-            padding-top: 7px;
-            width: 50px;
-            height: 30px;
-            vertical-align: middle;
-            border-bottom: 1px solid $color_secundario;
-            border-right: 1px solid $color_secundario;
-    }
-}
 
-.day-agenda-labels {
-    text-align: right;
-    margin: auto;
-    width: 50px;
-    display: inline-table;
-    margin-top: -24px;
-    margin-left: -6px;
-    font-size: 12px;
-}
 
-.switch {
-    font-size: 14px;
-    position: relative;
-    display: inline-block;
-    width: 43px;
-    height: 22px;
-    transition: .90s;
 
-        input{
-            display: none;
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-}
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $color_claro;
-    transition: .90s;
-    border-radius: 30px;
 
-        &::before{
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 20px;
-            border-radius: 20px;
-            left: 2px;
-            bottom: 1px;
-            background-color: $color_principal;
-            transition: .90s;
-        }
-}
 
-input:checked + .slider::before {
-    background-color: $color_claro;
-}
 
-input:checked + .slider {
-    background-color: $color_principal;
-}
 
-input:focus + .slider {
-    box-shadow: 0 0 1px $color_principal ;
-}
 
-input:checked + .slider:before {
-    transform: translateX(20px);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #config__header{
+//     background-color: $color_principal;
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+    
+//     nav{
+//         width: 100%;
+//         max-width: 770px;
+//         color: #fff;
+//         font-size: 15px;
+//         font-weight: bold;
+//         margin: 0 10px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//     }
+// }
+
+// .header__logo--container{
+//     width: 40px;
+// }
+
+// .config__banner{
+//     width: 100%;
+//     max-width: 770px;
+//     background-image: url("../public/assets/images_index/top_index.jpg");
+//     background-size: 100%;
+//     background-position: bottom;
+//     height: 95px;
+//     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+//     display: flex;
+//     align-items: center;
+//     justify-content: end;
+
+//     p{
+//         font-weight: bold;
+//         color: #fff;
+//         background-color: #aa9ca3d3;
+//         font-size: 15px;
+//         padding: 20px;
+//     }
+// }
+
+// .config__pasos{
+//     width: 100%;
+//     max-width: 770px;
+//     margin-top: 30px;
+//     overflow-wrap: normal;
+// }
+
+// .config__pasos--container{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 25px;
+//     padding: 20px;
+//     text-align: center;
+//     overflow-wrap: normal;
+
+//     div{
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//     }
+
+//     .config__logo--container{
+//         display: block;
+//         width: 70%;
+//         margin-top: 40px;
+//     }
+// }
+
+// .btn{
+//     .fa-lg{
+//         margin-right: 8px;
+//     }
+// }
+
+// .config__form{
+//     display: flex;
+//     flex-direction: column;
+//     width: 80%;
+//     gap: 20px;
+
+//         input{
+//         font-family: "Montserrat", sans-serif;
+//         font-size: 16px;
+//         width: 100%;
+//         text-align: left;
+//         border: 0 solid;
+//         padding: 4px;
+//         color: $color_principal;
+//         border-bottom: 1px solid $color_principal;
+//         background-color: $color_BGinputs;
+
+//             &:focus {
+//                 outline: 0;
+//                 color: #fff;
+//                 border-bottom: 1px solid $color_principal;
+//                 background-color: #aa9ca3;
+//             }
+
+//             &:disabled {
+//                 background-color: #d9dbda;
+//                 color: $color_principal;
+//             }
+//         }
+        
+//         span{
+//             font-size: 12px;
+//             width: 100%;
+//             color: #7d858b;
+//             padding-left: 5px;
+//             text-align: left;
+//             margin-top: 5px;
+//         }
+
+//         button{
+//             margin-top: 50px;
+//             align-self: center;
+//         }
+// }
+
+// .config__finalizar{
+//     padding: 5px;
+//     background-color: #aa9ca3;
+//     width: 100%;
+//     position: fixed;
+
+//     bottom: 0;
+//     text-align: center;
+//     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.7);
+// }
+
+// .config__horario--container{
+//     gap: 35px;
+//     align-items: center;
+
+//         table {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             font-size: 12px;
+//             border-spacing: 0px;
+//             border-collapse: collapse;
+
+//             th {
+//                 width: 50px;
+//                 height: 30px;
+//                 background-color: $color_secundario;
+//                 padding-right: 15px;
+//             }
+//         }
+// }
+
+// .config__horario--agenda{
+//     height: 250px;
+//     max-height: 250px;
+//     overflow-y: scroll;
+//     display: block;
+//     margin-top: 10px;
+//     padding-top: 20px;
+// }
+
+// .config__pasos--container{
+//     .config__checkweekend--container{
+//         font-family: "Montserrat", sans-serif;
+//         margin-top: 10px;
+//         font-weight: bold;
+//         color: #fff;
+//         background-color: #aa9ca3;
+//         font-size: 15px;
+//         text-align: left;
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 10px;
+//         padding: 20px;
+//     }
+// }
+
+// td {
+//     padding: 0px;
+//     cursor: pointer;
+
+//         .cell-agenda {
+//             font-size: 10px;
+//             color: $color_principal;
+//             padding-top: 7px;
+//             width: 50px;
+//             height: 30px;
+//             vertical-align: middle;
+//             border-bottom: 1px solid $color_secundario;
+//             border-right: 1px solid $color_secundario;
+//     }
+
+//         .cell-agenda-check{
+//             font-size: 10px;
+//             color: $color_secundario;
+//             background-color: $color_principal;
+//             padding-top: 7px;
+//             width: 50px;
+//             height: 30px;
+//             vertical-align: middle;
+//             border-bottom: 1px solid $color_secundario;
+//             border-right: 1px solid $color_secundario;
+//         }   
+// }
+
+// .day-agenda-labels {
+//     text-align: right;
+//     margin: auto;
+//     width: 50px;
+//     display: inline-table;
+//     margin-top: -24px;
+//     margin-left: -6px;
+//     font-size: 12px;
+// }
+
+// .switch {
+//     font-size: 14px;
+//     position: relative;
+//     display: inline-block;
+//     width: 43px;
+//     height: 22px;
+//     transition: .90s;
+
+//         input{
+//             display: none;
+//             opacity: 0;
+//             width: 0;
+//             height: 0;
+//         }
+// }
+
+// .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: $color_claro;
+//     transition: .90s;
+//     border-radius: 30px;
+
+//         &::before{
+//             position: absolute;
+//             content: "";
+//             height: 20px;
+//             width: 20px;
+//             border-radius: 20px;
+//             left: 2px;
+//             bottom: 1px;
+//             background-color: $color_principal;
+//             transition: .90s;
+//         }
+// }
+
+// input:checked + .slider::before {
+//     background-color: $color_claro;
+// }
+
+// input:checked + .slider {
+//     background-color: $color_principal;
+// }
+
+// input:focus + .slider {
+//     box-shadow: 0 0 1px $color_principal ;
+// }
+
+// input:checked + .slider:before {
+//     transform: translateX(20px);
+// }

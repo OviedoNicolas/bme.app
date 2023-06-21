@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", "Montserrat Alternates", sans-serif, Helvetica, Arial;
+  font-family: "Poppins", sans-serif;
+  color: #F4F4F4;
 }
 
 .unselectable {
@@ -19,6 +21,10 @@
 
 img {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn {
@@ -53,282 +59,214 @@ img {
   display: none !important;
 }
 
-.config__body, .login__body, .registro__body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#config__header, #registro__header, #login__header {
-  background-color: #986c79;
+.config__body {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  flex-direction: column;
 }
-#config__header nav, #registro__header nav, #login__header nav {
-  width: 100%;
-  max-width: 770px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 10px;
+
+#config__header {
+  background-color: #EAA79F;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px 0px;
+  width: 100%;
+}
+#config__header nav {
+  display: flex;
+  gap: 25px;
+}
+#config__header nav a {
+  padding: 10px;
+  border: 2px solid #F4F4F4;
+  border-radius: 50px;
+  width: 175px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#config__header nav a .fa {
+  font-size: 24px;
+}
+#config__header nav a:hover {
+  color: #EAA79F;
+  background-color: #F4F4F4;
+}
+#config__header nav a:hover i {
+  color: #EAA79F;
+}
+#config__header nav .header__redes {
+  width: 50px;
 }
 
 .header__logo--container {
-  width: 40px;
+  width: 250px;
 }
 
-.config__banner, .login__banner, .registro__banner {
-  width: 100%;
-  max-width: 770px;
-  background-image: url("../public/assets/images_index/top_index.jpg");
-  background-size: 100%;
-  background-position: bottom;
-  height: 95px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.config__banner p, .login__banner p, .registro__banner p {
-  font-weight: bold;
-  color: #fff;
-  background-color: rgba(170, 156, 163, 0.8274509804);
-  font-size: 15px;
-  padding: 20px;
-}
-
-.config__pasos {
-  width: 100%;
-  max-width: 770px;
-  margin-top: 30px;
-  overflow-wrap: normal;
-}
-
-.config__pasos--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  padding: 20px;
-  text-align: center;
-  overflow-wrap: normal;
-}
-.config__pasos--container div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.config__pasos--container .config__logo--container {
-  display: block;
-  width: 70%;
-  margin-top: 40px;
-}
-
-.btn .fa-lg {
-  margin-right: 8px;
-}
-
-#inicial, #paso1, #paso2, #paso3, #paso5 {
-  display: none;
-}
-
-.config__form, .login__form, .registro__form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 20px;
-}
-.config__form input, .login__form input, .registro__form input {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  width: 100%;
-  text-align: left;
-  border: 0 solid;
-  padding: 4px;
-  color: #986c79;
-  border-bottom: 1px solid #986c79;
-  background-color: #f8eaf1;
-}
-.config__form input:focus, .login__form input:focus, .registro__form input:focus {
-  outline: 0;
-  color: #fff;
-  border-bottom: 1px solid #986c79;
-  background-color: #aa9ca3;
-}
-.config__form input:disabled, .login__form input:disabled, .registro__form input:disabled {
-  background-color: #d9dbda;
-  color: #986c79;
-}
-.config__form span, .login__form span, .registro__form span {
-  font-size: 12px;
-  width: 100%;
-  color: #7d858b;
-  padding-left: 5px;
-  text-align: left;
-  margin-top: 5px;
-}
-.config__form button, .login__form button, .registro__form button {
-  margin-top: 50px;
-  align-self: center;
-}
-
-.config__finalizar {
-  padding: 5px;
-  background-color: #aa9ca3;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.7);
-}
-
-.config__horario--container {
-  gap: 35px;
-  align-items: center;
-}
-.config__horario--container table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-.config__horario--container table th {
-  width: 50px;
-  height: 30px;
-  background-color: #d6b6b1;
-  padding-right: 15px;
-}
-
-.config__horario--agenda {
-  height: 250px;
-  max-height: 250px;
-  overflow-y: scroll;
-  display: block;
-  margin-top: 10px;
-  padding-top: 20px;
-}
-
-.config__pasos--container .config__checkweekend--container {
-  font-family: "Montserrat", sans-serif;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #aa9ca3;
-  font-size: 15px;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-}
-
-td {
-  padding: 0px;
-}
-td .cell-agenda {
-  font-size: 10px;
-  color: #986c79;
-  padding-top: 7px;
-  width: 50px;
-  height: 30px;
-  vertical-align: middle;
-  border-bottom: 1px solid #d6b6b1;
-  border-right: 1px solid #d6b6b1;
-}
-
-.day-agenda-labels {
-  text-align: right;
-  margin: auto;
-  width: 50px;
-  display: inline-table;
-  margin-top: -24px;
-  margin-left: -6px;
-  font-size: 12px;
-}
-
-.switch {
-  font-size: 14px;
-  position: relative;
-  display: inline-block;
-  width: 43px;
-  height: 22px;
-  transition: 0.9s;
-}
-.switch input {
-  display: none;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+.config__background {
+  overflow: hidden;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
   position: absolute;
-  cursor: pointer;
+  top: 0;
+  z-index: -1;
+}
+
+.config__main {
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 120px;
+}
+.config__main h1 {
+  font-size: 60px;
+}
+
+.config__container {
+  background-color: #F4F4F4;
+  border-radius: 25px;
+  margin-top: 75px;
+}
+
+.config__container--titulo {
+  background-color: #393B50;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.config__container--titulo div p {
+  font-size: 24px;
+  font-weight: 200;
+}
+.config__container--titulo div h2 {
+  font-size: 30px;
+}
+
+.config__titulo--num {
+  border: 2px solid white;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 6px #1b1b2d;
+  font-weight: 600;
+}
+
+#loader {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  display: none;
+}
+#loader::after, #loader::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f8eaf1;
-  transition: 0.9s;
-  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #986c79;
+  animation: load 1s linear infinite;
+  transform: scale(0);
+  opacity: 0;
 }
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
+#loader::after {
+  animation-delay: -0.5;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/*ALERT CON INPUT DE DATOS*/
+.req-confirmarpedido {
+  background: rgba(19, 35, 47, 0.95);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  left: 2px;
-  bottom: 1px;
-  background-color: #986c79;
-  transition: 0.9s;
+  position: fixed;
+  width: 95%;
+  color: white;
+  top: 150px;
+  margin: auto;
+  left: 2.5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-input:checked + .slider::before {
-  background-color: #f8eaf1;
+.req-confirmarpedido h3 {
+  padding-top: 0px;
+  color: red;
 }
 
-input:checked + .slider {
-  background-color: #986c79;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #986c79;
-}
-
-input:checked + .slider:before {
-  transform: translateX(20px);
-}
-
-#registro__header, #login__header {
-  background-color: transparent;
-}
-
-.registro__logo--container, .login__logo--container {
-  width: 70%;
-  margin-top: 40px;
-  max-width: 540px;
-}
-
-.registro__form--container, .login__form--container {
+.div-mainalert {
+  position: fixed;
   width: 100%;
-  max-width: 770px;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: 150px;
+  margin: auto;
+  left: 2.5%;
 }
-.registro__form--container div, .login__form--container div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
+.div-alert {
+  background: rgba(19, 35, 47, 0.95);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  /*
+  position: fixed;
+  width: 50%;
+  */
+  /*
+  top: 150px;
+     left: 50%;
+  */
+  color: white;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 400px;
+}
+
+.div-alert h3 {
+  padding-top: 0px;
+  color: red;
+}
+
+.boton-alertconfirmar {
+  background-color: #4e9bcc;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+}
+
+.boton-alertconfirmar:focus {
+  outline: none;
+}
+
+.boton-alertconfirmar:hover {
+  outline: none;
+  background-color: #086A87;
+  color: white;
+}
+
+.boton-alertconfirmar:active {
+  outline: none;
+  background-color: #086A87;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

@@ -8,123 +8,20 @@
     <link rel="stylesheet" href="../src/styles.css">
     <title>Config</title>
 </head>
-<body class="config__body">
+<body class="config__body" onload="loadParams();">
     <header id="config__header">
-        <div class="header__logo--container">
-            <img src="../src/assets/images/Logo blanco-10.svg" alt="">
-        </div>
         <nav>
-            <a href="">INGRESAR</a>
-            <a href="">CREAR AHORA</a>
-            <a class="header__redes" href="">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <a class="header__redes" href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a class="header__redes" href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
+            <p id="config_titulo--inicial">Configuración inicial</p>
+            <p id="config_titulo--pasos">Configuración inicial ( paso <span>1</span> de 5 )</p>
+            <div class="header__logo--container">
+                <img src="../src/assets/images/logo_1.png" alt="">
+            </div>
         </nav>
     </header>
-    <div class="config__background">
-        <img src="../src/assets/images/background-1.jpg" alt="">
-    </div>
-    <main class="config__main">
-        <h1>Configuración Inicial</h1>
-        <section class="config__container">
-            <div class="config__container--titulo">
-                <p class="config__titulo--num">1</p>
-                <div>
-                    <p>PASO <span>1</span></p>
-                    <h2>Cargá los datos de tu empresa</h2>
-                </div>
-            </div>
-            <div class="config__container--body">
-                <div class="config__pasos--container">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div class="paso1">
-                        <form class="config__form" autoComplete="off">
-                            <div>
-                                <input type="text"
-                                    class="config__form--input"
-                                    name="name"
-                                    placeholder=""
-                                    required
-                                    autoFocus
-                                    id="name">
-                                <span>Tu marca / nombre de fantasía</span>
-                            </div>
-                            <div>
-                                <input type="text"
-                                name="url"
-                                class="config__form--input"
-                                placeholder=""
-                                value="beauting.me/"
-                                disabled
-                                id="url">
-                                <span>Dirección de tu tienda virtual</span>
-                            </div>
-                            <div>
-                                <input type="text"
-                                class="config__form--input"
-                                name="what"
-                                placeholder=""
-                                required
-                                id="what">
-                                <span>Whatsapp (para que te contacten)</span>
-                            </div>
-                            <div>
-                                <input type="text" 
-                                class="config__form--input"
-                                name="address"
-                                placeholder=""
-                                required
-                                id="address">
-                                <span>Dirección (donde ofrecés los servicios)</span>
-                            </div>
-                            <div>
-                                <input type="text" 
-                                class="config__form--input"
-                                name="floor"
-                                placeholder=""
-                                id="floor">
-                                <span>Piso - departamento</span>
-                            </div>
-                            <div>
-                                <input type="text" 
-                                class="config__form--input"
-                                name="city"
-                                placeholder=""
-                                required
-                                id="city">
-                                <span>Ciudad - barrio</span>
-                            </div>
-                            <div>
-                                <input type="text" 
-                                class="config__form--input"
-                                name="state"
-                                placeholder=""
-                                required
-                                id="state">
-                                <span>Provincia</span>
-                            </div>
-                            <button class="btn unselectable" type="button" onclick=crearTienda()>
-                                <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
-                                    Continuar
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- <div class="config__banner">
+    <div class="config__banner">
         <p>Configuración inicial</p>
-    </div> -->
-    <!-- <div class="config__pasos" id="paso0">
+    </div>
+    <div class="config__pasos" id="paso0">
         <div class="config__pasos--container">
             <p>Tenemos que completar algunos datos para que tu tienda (con los servicios que ofrecés) se pueda ver online.</p>
             <p>En unos pocos pasos vas a tener todo listo!</p>
@@ -211,8 +108,8 @@
                 </button>
             </form>
         </div>
-    </div> -->
-    <!-- <div class="config__pasos" id="paso2">
+    </div>
+    <div class="config__pasos" id="paso2">
         <div class="config__pasos--container">
             <p>Es momento de subir el logo (o una imagen que te caracterice).</p>
             <p>Si no tenés uno a mano, podés agregarlo más tarde (mientras tanto utilizaremos el nuestro).</p>
@@ -225,8 +122,8 @@
                 Omitir paso
             </button>
         </div>
-    </div> -->
-    <!-- <div class="config__pasos" id="paso3">
+    </div>
+    <div class="config__pasos" id="paso3">
         <div class="config__pasos--container">
             <p>Ahora vamos a posicionar tu ubicación en el mapa (el lugar donde brindás los servicios), para que puedan encontrarte por cercanía tus potenciales nuevos clientes.</p>
             <button class="btn unselectable">
@@ -238,9 +135,10 @@
                 Continuar
             </button>
         </div>
-    </div> -->
-    <!-- <div class="config__pasos" id="paso4">
+    </div>
+    <div class="config__pasos" id="paso4">
         <div class="config__pasos--container">
+            <!-- Paso 4 (reveer) -->
             <p>Completá los horarios de atención para cada día de la semana 
                 (marcá los casilleros correspondientes).</p>
             <div class="config__horario--container">
@@ -256,6 +154,7 @@
                         </tr>
                     </thead>
                     <tbody class="config__horario--agenda" id="tb_lun-vie">
+                        <!-- Tabla de horarios traida desde la api -->
                     </tbody>
                 </table>
                 <div class="config__checkweekend--container">
@@ -274,6 +173,7 @@
                         </tr>
                     </thead>
                     <tbody class="config__horario--agenda" id="tb_sab-dom">
+                        <!-- Tabla de horarios traida desde la api -->
                     </tbody>
                 </table>
             </div>
@@ -282,8 +182,8 @@
                     Continuar
             </button>
         </div>
-    </div> -->
-    <!-- <div class="config__pasos" id="paso5">
+    </div>
+    <div class="config__pasos" id="paso5">
         <div class="config__pasos--container">
             <p>Comienza agregando algunos servicios para que aparezcan 
                 en tu tienda virtual (podrás continuar en cualquier momento 
@@ -299,8 +199,48 @@
                 </button>
             </div>
         </div>
-    </div> -->
-    <!-- <script src="./assets/script/config.js"></script>
-    <script src="./assets/script/box-alert.js"></script> -->
+    </div>
+    <!-- Modales -->
+    <div>
+        <div>
+            <div>
+                <div>
+                    <input type="file">
+                    <label for="">
+                        <figure>
+                            <svg>
+                                
+                            </svg>
+                        </figure>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div>
+                <!-- mapa -->
+            </div>
+            <button></button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>categoria</p>
+        </div>
+        <div>
+            <p>Titulo del servicio</p>
+        </div>
+        <div>
+            <p>Descripción (informá con el mayor detalle posible para atrapar a tus clientes):</p>
+        </div>
+        <div>
+            <p>Tiempo estimado</p>
+            in
+        </div>
+    </div>
+    <script src="./assets/script/config.js"></script>
+    <script src="./assets/script/box-alert.js"></script>
 </body>
 </html>

@@ -24,21 +24,39 @@
                 autoFocus
                 name="email"
                 placeholder=""
-                required>
+                id="inp_em">
                 <span>E-mail (usuario):</span>
             </div>
             <div>
-                <input type="password"
-                name="password"
-                placeholder=""
-                required>
+                <div>
+                    <input type="password" name="password" placeholder="" id="inp_pw">
+                    <button class="toggle-button unselectable" type="button" onclick="togglePwV('inp_pw', 'icon_pw')">
+                        <i id="icon_pw" class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
                 <span>Contraseña:</span>
             </div>
-            <button class="btn unselectable" type="submit">
+            <button onclick=click_login() class="btn unselectable" type="button">
                 <i class="fa fa-user-o fa-lg" aria-hidden="true"></i>
                 INGRESAR
             </button>
         </form>
+        <div id="loader"></div>
+        <div id="Alert" class="div-mainalert animated slideInDown unselectable" 
+        style="z-index:10100;text-align:center;display:none;" >
+            <div class="div-alert" >
+                <div id="Alert-title" class="div-alert-title" style='margin:20px;'>
+                </div>
+                <div id="Alert-content" style='margin:20px;font-size:17px;'>
+                </div>
+                <div id="div_alert_buttons" class="div-alert-buttons">
+                    <button id="alert_btn_ok" class="boton-alertconfirmar" style='margin:30px;'>ACEPTAR</button>
+                    <button id="alert_btn_cancel" onclick='hideAlert();' class="boton-alertconfirmar" style='margin:30px;'>Aceptar</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="./assets/script/login.js"></script>
+    <script src="./assets/script/box-alert.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkState();">
+    <h1>holissss</h1>
+    <script>
+        let mainUrlApi = "http://localhost:3002/";
+        
+        const checkState = () => {
+
+            let url = 'v1/config/initialstates';
+
+            console.log('call loadParams:', mainUrlApi, url);
+            
+            //let params = { em: 'm@m.com', pw: '12345' };
+            let headers = {
+                'Content-Type': 'application/json',
+                'x-access-token': localStorage.getItem('token')
+            };
+
+            fetch(mainUrlApi + url, { 
+                method: 'GET', 
+                headers: headers, 
+                //body: JSON.stringify(params) 
+            })
+            .then(response => response.json())
+            .then(res => {   
+                console.log("config step:", JSON.stringify(res));
+                if (res.status === "ok") {
+                    
+                    alert("step:", res.config.config_step);
+
+
+
+                    //window.location.href = "home.html";
+                }
+                else {
+
+                }
+
+            })
+            .catch(err => console.log("nop "+err) );
+
+
+        }
+    </script>
+    
+</body>
+</html>
